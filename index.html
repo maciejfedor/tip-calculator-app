@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+        <img alt="splitter logo" src="images/logo.svg" />
+      </h1>
+    </header>
+    <main class="tip">
+      <div class="tip-form-box">
+        <form class="tip-form">
+          <div class="input-box">
+            <label for="input-bill"> Bill</label>
+            <input
+              class="input-bill"
+              name="input-bill"
+              type="number"
+              placeholder="0"
+              min="0"
+            />
+          </div>
+          <div class="input-box">
+            <label class="label-tip" for="btn">Select Tip %</label>
+            <div class="input-btns">
+              <button class="btn btn--active" type="button" value="5">
+                5%
+              </button>
+              <button class="btn" type="button" value="10">10%</button>
+              <button class="btn" type="button" value="15">15%</button>
+              <button class="btn" type="button" value="25">25%</button>
+              <button class="btn" type="button" value="50">50%</button>
+              <input
+                class="btn btn--custom"
+                name="select-tip"
+                type="number"
+                placeholder="Custom"
+                min="0"
+              />
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="input-label-box">
+              <label class="label-input">Number of People</label>
+              <p class="label-error">Can't be zero</p>
+            </div>
+            <input
+              class="input-people"
+              type="number"
+              placeholder="0"
+              min="0"
+              step="1"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="tip-summary">
+        <div class="summary-amount-box">
+          <p class="summary-text">Tip Amount</p>
+          <span class="subheading">/ person</span>
+        </div>
+
+        <p class="tip-amount">$0.00</p>
+
+        <div class="summary-total-box">
+          <p class="summary-text">Total</p>
+          <span class="subheading">/ person</span>
+        </div>
+
+        <p class="tip-amount tip-amount--total">$0.00</p>
+
+        <button class="btn-reset">Reset</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
